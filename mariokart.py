@@ -54,14 +54,14 @@ def draw():
 
         if filesave == False:
             today = datetime.now()
-            with open('newfile.csv','a') as file:
+            with open('gamescores.csv','a') as file:
                 writer = csv.writer(file)
                 writer.writerow([today.date(),score])
             filesave = True
 
         mariotime.draw()
 
-        with open('newfile.csv','r') as file:
+        with open('gamescores.csv','r') as file:
             reader = csv.reader(file)
             high_score=[]
             for row in reader:
